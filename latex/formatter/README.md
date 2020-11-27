@@ -10,7 +10,7 @@ To format Latex files one can use `latexindent` which is a perl script. Here is 
 ```
 
 | Parameter | Meaning     | 
-| :-------- | :----------: | 
+| :-------- | :---------- | 
 |  -w       | The flag says, that the file is processed in place. A backup file is created. | 
 |  -s       | The silient option, which means nothing is written to the terminal. | 
 |  -c <dir> | A directory for the backup and the logfile. Use a directory which is cleaned up regularly. | 
