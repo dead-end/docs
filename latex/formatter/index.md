@@ -1,0 +1,1 @@
+# Latext Formatter for Texstudio
