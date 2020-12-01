@@ -2,30 +2,30 @@
 
 | Command                | Description |
 |------------------------|-------------|
-|:v/\<PATTERN\>/d        |Delete all lines, that do NOT match PATTERN |
-|:v/foo/d                |Delete all lines that do NOT contain "foo" |
-|:v/foo\\|bar/d          |Delete all lines that do NOT contain "foo" or "bar" |
-|u                       |Undo |
-|:e!                     |Reload the file and discard all changes |
+|`:v/<PATTERN>/d`        |Delete all lines, that do NOT match PATTERN |
+|`:v/foo/d`              |Delete all lines that do NOT contain "foo" |
+|`:v/foo\\|bar/d`        |Delete all lines that do NOT contain "foo" or "bar" |
+|`u`                     |Undo |
+|`:e!`                   |Reload the file and discard all changes |
 
 # Search and replace
 
 | Command                | Description |
 |------------------------|-------------|
-| :\<REGION\>s//<br>- without REGION current line<br>- % the whole file ||
-|:%s/ \\\*INFO.\*Path:// |Deletes in every line in the whole file |
-|:%s/foo/bar/g           |Change each 'foo' to 'bar' in all the lines. | 
-|:%g/foo/d               |Delete all lines that do contain 'foo' |
-|:%v/foo/d               |Delete all lines that do NOT contain 'foo' |
-|:%v/\(foo\|bar\)/d      |Delete all lines that do NOT contain 'foo' or 'bar' |
+|`:<REGION>s//` <br>- without `REGION` current line<br>- `%` the whole file ||
+|`:%s/ \*INFO.*Path://`  |Deletes in every line in the whole file |
+|`:%s/foo/bar/g`          |Change each 'foo' to 'bar' in all the lines. | 
+|`:%g/foo/d`              |Delete all lines that do contain 'foo' |
+|`:%v/foo/d`              |Delete all lines that do NOT contain 'foo' |
+|`:%v/\(foo\|bar\)/d`     |Delete all lines that do NOT contain 'foo' or 'bar' |
 
 # Registers
 
 | Command                | Description |
 |------------------------|-------------|
-|\<CRL\>-R\*             |In insert mode copy clipboard|
-|"\*y  "\*p              |In normal mode yank / paste to / from clipboard|
-|"1y  "1p                |In normal mode yank / paste to / from buffer "1"|
+|`<CRL>-R*`              |In insert mode copy clipboard|
+|`"*y` <br/> `"*p`       |In normal mode yank / paste to / from clipboard|
+|`"1y` <br/> `"1p`       |In normal mode yank / paste to / from buffer "1"|
 
 # Buffer
 
@@ -40,7 +40,7 @@
 | Command                | Description |
 |------------------------|-------------|
 |`ciw` <br/> `diW`                         |Change / delete inner word |
-|`ci(` <br/> `ci)` <br/> `ci[` <br/> `ci]` |Changes inner: (hallo) |
+|`ci(` <br/> `ci)` <br/> `ci[` <br/> `ci]` |Changes inner: <br/> (hallo) <br/> [hallo]|
 
 # Spelling
 
@@ -79,8 +79,8 @@ U:\.vimrc
 
 | Command                | Description |
 |------------------------|-------------|
-|`:1,.d`                 |Delete to the beginning of the file (Current pos: .) |
-|`:.,$d`                 |Delete to the end of the file       (Current pos: .) |
+|`:1,.d`                 |Delete to the beginning of the file (Current pos: `.`) |
+|`:.,$d`                 |Delete to the end of the file       (Current pos: `.`) |
 
 # visual select file
 
