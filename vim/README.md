@@ -46,12 +46,12 @@
 
 Spelling requires spelling files from: http://ftp.vim.org/vim/runtime/spell/
 
-  spell/de.utf-8.spl
-  spell/en.utf-8.spl
+- spell/de.utf-8.spl
+- spell/en.utf-8.spl
 
 The 'spell' directory is located under the 'runtimepath'. This is currently:
 
-  U:\vimfiles\
+- U:\vimfiles\
 
 and can be displayed with:
 
@@ -67,37 +67,49 @@ Select word and use 'z=' to get a recommandation.
 
 The current .vimrc can be reached by:
 
+``` 
   $MYVIMRC 
   U:\.vimrc
+```
 
 # delete
 
-  :1,.d     Delete to the beginning of the file (Current pos: .)
-  :.,$d     Delete to the end of the file       (Current pos: .)
+| Command                | Description |
+|------------------------|-------------|
+|:1,.d                   |Delete to the beginning of the file (Current pos: .) |
+|:.,$d                   |Delete to the end of the file       (Current pos: .) |
 
 # visual select file
 
+```
   ggVG      select complete file
+```
 
 # Diff two empty buffers
-> Mark two files in the explorer and use "diff with vim"
 
----
+## Explorer
 
-> Create two empty buffers, fill in the content and start diff
+Mark two files in the explorer and use "diff with vim"
 
-  :tabnew <FILE1>
-  :vnew <FILE2>
-  :windo diffthis
+## By hand
 
-> End diff
+- Create two empty buffers, fill in the content and start diff
 
-  :windo diffoff
+```
+:tabnew <FILE1>
+:vnew <FILE2>
+:windo diffthis
+```
 
-> Move to the right/left window:
+- End diff
 
-  <CTRL-w>RIGHT
-  <CTRL-w>LEFT
+```
+:windo diffoff
+```
 
----
+- Move to the right/left window:
 
+```
+\<CTRL-w\>RIGHT
+\<CTRL-w\>LEFT
+```
