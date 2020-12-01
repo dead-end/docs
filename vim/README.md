@@ -2,9 +2,9 @@
 
 | Command                | Description |
 |------------------------|-------------|
-|:v/<PATTERN>/d          |Delete all lines, that do NOT match PATTERN |
+|:v/\<PATTERN\>/d        |Delete all lines, that do NOT match PATTERN |
 |:v/foo/d                |Delete all lines that do NOT contain "foo" |
-|:v/foo\|bar/d           |Delete all lines that do NOT contain "foo" or "bar" |
+|:v/foo\\|bar/d          |Delete all lines that do NOT contain "foo" or "bar" |
 |u                       |Undo |
 |:e!                     |Reload the file and discard all changes |
 
@@ -12,8 +12,8 @@
 
 | Command                | Description |
 |------------------------|-------------|
-| :{REGION}s//<br>- without REGION current line<br>- % the whole file ||
-|:%s/ \*INFO.*Path://    |Deletes in every line in the whole file |
+| :\<REGION\>s//<br>- without REGION current line<br>- % the whole file ||
+|:%s/ \\\*INFO.\*Path:// |Deletes in every line in the whole file |
 |:%s/foo/bar/g           |Change each 'foo' to 'bar' in all the lines. | 
 |:%g/foo/d               |Delete all lines that do contain 'foo' |
 |:%v/foo/d               |Delete all lines that do NOT contain 'foo' |
@@ -21,24 +21,26 @@
 
 # Registers
 
-
 | Command                | Description |
 |------------------------|-------------|
-|\<CRL\>-R*              |In insert mode copy clipboard|
-|"*y  "*p                |In normal mode yank / paste to / from clipboard|
+|\<CRL\>-R\*             |In insert mode copy clipboard|
+|"\*y  "\*p              |In normal mode yank / paste to / from clipboard|
 |"1y  "1p                |In normal mode yank / paste to / from buffer "1"|
 
 # Buffer
 
-:ls                     list all buffers
-:b <tab>                tab through the buffers and select active
+| Command                | Description |
+|------------------------|-------------|
+|:ls                     |list all buffers |
+|:b <tab>                |tab through the buffers and select active |
 
 
 # Inner
 
-ciw  diW                Change / delete inner word
-
-ci(  ci)  ci[  ci]      Changes inner: (hallo)
+| Command                | Description |
+|------------------------|-------------|
+|ciw <br/> diW           |Change / delete inner word |
+|ci(  ci) <br/> ci[  ci] |Changes inner: (hallo) |
 
 # Spelling
 
