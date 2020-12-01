@@ -50,40 +50,43 @@ Spelling requires spelling files from: http://ftp.vim.org/vim/runtime/spell/
 - spell/en.utf-8.spl
 
 The 'spell' directory is located under the 'runtimepath'. This is currently:
-
-- U:\vimfiles\
+```
+U:\vimfiles\
+```
 
 and can be displayed with:
 
-  echo &runtimepath
+```
+echo &runtimepath
+```
 
-setlocal spelllang=de   Set the language for the spelling for the buffer
+| Command                | Description |
+|------------------------|-------------|
+|`setlocal spelllang=de` |Set the language for the spelling for the buffer |
+|`setlocal spell`        |Activate the spelling for the buffer |
 
-setlocal spell          Activate the spelling for the buffer
-
-Select word and use 'z=' to get a recommandation.
+Select word and use `'z='` to get a recommandation.
 
 # .vimrc
 
 The current .vimrc can be reached by:
-
 ``` 
-  $MYVIMRC 
-  U:\.vimrc
+$MYVIMRC 
+U:\.vimrc
 ```
 
 # delete
 
 | Command                | Description |
 |------------------------|-------------|
-|:1,.d                   |Delete to the beginning of the file (Current pos: .) |
-|:.,$d                   |Delete to the end of the file       (Current pos: .) |
+|`:1,.d`                 |Delete to the beginning of the file (Current pos: .) |
+|`:.,$d`                 |Delete to the end of the file       (Current pos: .) |
 
 # visual select file
 
-```
-  ggVG      select complete file
-```
+| Command                | Description |
+|------------------------|-------------|
+| `ggVG`                 | select complete file |
 
 # Diff two empty buffers
 
@@ -93,22 +96,19 @@ Mark two files in the explorer and use "diff with vim"
 
 ## By hand
 
-- Create two empty buffers, fill in the content and start diff
-
+Create two empty buffers, fill in the content and start diff
 ```
 :tabnew <FILE1>
 :vnew <FILE2>
 :windo diffthis
 ```
 
-- End diff
-
+End diff
 ```
 :windo diffoff
 ```
 
-- Move to the right/left window:
-
+Move to the right/left window:
 ```
 \<CTRL-w\>RIGHT
 \<CTRL-w\>LEFT
