@@ -61,3 +61,51 @@ set path+=**
 set wildmenu
 set wildmode=full
 ```
+
+# Mappings
+
+```
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" My mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Copy the visual selection to the clipboard
+" Use: "+y and: "+p
+vnoremap <leader>c "+y
+vnoremap <leader>p "*p
+
+" Copy the whole file to the buffer and return to the current position
+"   mq   - set mark q at the current line
+"   qqVG - visual selection of the whole file
+"   "+y  - copy selection to the clipboard
+"   'q   - goto mark q
+nnoremap <leader>a mqggVG"+y'q
+
+" Paste clipboard in insert mode
+inoremap <leader>p <C-R>*
+
+" Create new tab
+nnoremap <leader>nt :tabnew<CR>
+
+" prev / next tab
+nnoremap <F4> :tabnext<CR>
+nnoremap <F3> :tabprevious<CR>
+"
+" Create new tab
+nnoremap <leader>t :e<CR>G
+nnoremap <leader>d :1,$d<CR>:w!<CR>
+
+" Tweaks for browsing
+let g:netrw_banner=0        " disable annoying banner
+let g:netrw_browse_split=4  " open in prior window
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+" NOW WE CAN:
+" - :edit a folder to open a file browser
+" - <CR>/v/t to open in an h-split/v-split/tab
+" - check |netrw-browse-maps| for more mappings
+```
+
