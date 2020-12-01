@@ -6,9 +6,10 @@
 " .vimrc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Set the leader
+" Set the leader for the mappings
 let mapleader = ","
 
+" Set the file encoding
 set fileencoding=utf-8
 
 " enter the current millenium
@@ -29,9 +30,10 @@ set expandtab
 " enable syntax and plugins (for netrw)
 filetype plugin on
 
+" Switch on syntax highlight
 syntax on
 
-"OK
+" Colors themes that are useful
 " :colorscheme blue
 " :colorscheme evening
 :colorscheme desert
