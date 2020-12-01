@@ -1,38 +1,23 @@
 # Filtering
 
 | Command                | Description |
-|------------------------|--------------------------|
+|------------------------|-------------|
 |:v/<PATTERN>/d          |Delete all lines, that do NOT match PATTERN |
 |:v/foo/d                |Delete all lines that do NOT contain "foo" |
 |:v/foo\|bar/d           |Delete all lines that do NOT contain "foo" or "bar" |
 |u                       |Undo |
 |:e!                     |Reload the file and discard all changes |
 
-
-
-:v/<PATTERN>/d          Delete all lines, that do NOT match PATTERN
-
-:v/foo/d                Delete all lines that do NOT contain "foo"
-:v/foo\|bar/d           Delete all lines that do NOT contain "foo" or "bar"
-
-u                       Undo
-:e!                     Reload the file and discard all changes
-
 # Search and replace
 
-:<REGION>s// 
-
-  - without REGION current line
-  - % the whole file
-
-:%s/ \*INFO.*Path://    Deletes in every line in the whole file
-
-:%s/foo/bar/g           Change each 'foo' to 'bar' in all the lines. 
-
-:%g/foo/d               Delete all lines that do contain 'foo'
-:%v/foo/d               Delete all lines that do NOT contain 'foo'
-
-:%v/\(foo\|bar\)/d      Delete all lines that do NOT contain 'foo' or 'bar'
+| Command                | Description |
+|------------------------|-------------|
+| :<REGION>s//<br>- without REGION current line<br>- % the whole file ||
+|:%s/ \*INFO.*Path://    |Deletes in every line in the whole file |
+|:%s/foo/bar/g           |Change each 'foo' to 'bar' in all the lines. | 
+|:%g/foo/d               |Delete all lines that do contain 'foo' |
+|:%v/foo/d               |Delete all lines that do NOT contain 'foo' |
+|:%v/\(foo\|bar\)/d      |Delete all lines that do NOT contain 'foo' or 'bar' |
 
 # Registers
 
