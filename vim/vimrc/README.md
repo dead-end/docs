@@ -10,3 +10,18 @@ vnoremap <leader>c "+y
 vnoremap <leader>p "*p
 
 ```
+
+# Auto Commands
+
+The general form is:
+```
+autocmd <EVENT> <FILE-TYPE> <COMMAND
+
+```
+
+Examples:
+```
+autocmd BufWritePre *.py %s/\s\+$//e
+
+autocmd BufEnter *.en.* setlocal spelllang=en spell
+```
