@@ -12,7 +12,7 @@
 
 | Command                | Description |
 |------------------------|-------------|
-| :<REGION>s//<br>- without REGION current line<br>- % the whole file ||
+| :{REGION}s//<br>- without REGION current line<br>- % the whole file ||
 |:%s/ \*INFO.*Path://    |Deletes in every line in the whole file |
 |:%s/foo/bar/g           |Change each 'foo' to 'bar' in all the lines. | 
 |:%g/foo/d               |Delete all lines that do contain 'foo' |
@@ -21,10 +21,12 @@
 
 # Registers
 
-<CRL>-R*                In insert mode copy clipboard
 
-"*y  "*p                In normal mode yank / paste to / from clipboard
-"1y  "1p                In normal mode yank / paste to / from buffer "1"
+| Command                | Description |
+|------------------------|-------------|
+|\<CRL\>-R*              |In insert mode copy clipboard|
+|"*y  "*p                |In normal mode yank / paste to / from clipboard|
+|"1y  "1p                |In normal mode yank / paste to / from buffer "1"|
 
 # Buffer
 
