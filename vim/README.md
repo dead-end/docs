@@ -31,16 +31,16 @@
 
 | Command                | Description |
 |------------------------|-------------|
-|:ls                     |list all buffers |
-|:b <tab>                |tab through the buffers and select active |
+|`:ls`                   |list all buffers |
+|`:b <tab>`              |tab through the buffers and select active |
 
 
 # Inner
 
 | Command                | Description |
 |------------------------|-------------|
-|ciw <br/> diW           |Change / delete inner word |
-|ci(  ci) <br/> ci[  ci] |Changes inner: (hallo) |
+|`ciw` <br/> `diW`                         |Change / delete inner word |
+|`ci(` <br/> `ci)` <br/> `ci[` <br/> `ci]` |Changes inner: (hallo) |
 
 # Spelling
 
@@ -110,6 +110,6 @@ End diff
 
 Move to the right/left window:
 ```
-\<CTRL-w\>RIGHT
-\<CTRL-w\>LEFT
+<CTRL-w>RIGHT
+<CTRL-w>LEFT
 ```
