@@ -62,6 +62,33 @@ set wildmenu
 set wildmode=full
 ```
 
+```
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Windows settings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+if has("win32")
+
+  " Use a default working directory.
+  cd C:\Users\dead-end
+
+  " Set the initial window size
+  set lines=40 columns=160
+
+  " Set the font
+  set guifont=Courier_New:h10:cANSI:qDRAFT
+
+  " Use only filename without path for tabs
+  set guitablabel=%t
+else
+
+  " Unix file
+  set fileformat=unix
+
+endif
+```
+
+
 # Mappings
 
 ```
