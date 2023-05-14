@@ -34,14 +34,12 @@ cd fix-test
 npm init -y
 ```
 
-Install the dependencies
+Install the other dependencies
 ```
 npm i rimraf
-
-npm i isomorphic-git
 ```
 
-Change the dependency in the package.json:
+Add the dependency in the package.json:
 ```
 cat package.json
 {
