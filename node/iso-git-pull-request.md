@@ -63,5 +63,10 @@ cat package.json
 ```
 npm install
 ```
-Now you can run the tests before the fix (`node index.js`). 
+Now you can run the tests before the fix (`node index.js`) and fix the bug.
+
+Build the module again with the fix included.
+```
+npm run build
+...
 
