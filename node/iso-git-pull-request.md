@@ -63,3 +63,5 @@ cat package.json
 ```
 npm install
 ```
+Now you can run the tests before the fix (`node index.js`). 
+
