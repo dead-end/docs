@@ -1,4 +1,4 @@
-## Steps to create a pull request
+# Steps to create a pull request
 
 The first step is to fork the repository on github.
 
@@ -10,18 +10,21 @@ cd isomorphic-git/
 
 git branch fix-1245
 
-git checkout "fix-1245"
-Switched to branch 'fix-1245'
-```
+git checkout fix-1245
+Switched to branch fix-1245
 
-The next step is to build the module:
-```
 npm install
 
 npm run build
-...
-isomorphic-git-0.0.0-development.tgz
 ```
+
+Create the link 
+- https://docs.npmjs.com/cli/v8/commands/npm-link
+- https://medium.com/dailyjs/how-to-use-npm-link-7375b6219557
+```
+npm link
+...
+
 Then we create a project to test the fix
 
 ```
@@ -37,36 +40,19 @@ npm init -y
 Install the other dependencies
 ```
 npm i rimraf
+
+npm i isomorphic-git
+
+npm link isomorphic-git
+
+ls -l node_modules/isomorphic-git
+lrwxrwxrwx 1 dead-end dead-end 20 Mai 14 10:54 node_modules/isomorphic-git -> ../../isomorphic-git
 ```
 
-Add the dependency in the package.json:
-```
-cat package.json
-{
-  "name": "fix-test",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "isomorphic-git": "file:../isomorphic-git/isomorphic-git-0.0.0-development.tgz",
-    "rimraf": "^5.0.0"
-  }
-}
-```
+Now we can write code to trigger the fix.
+Fix the bug in the branch.
+Run build
+Run your test code again
 
-```
-npm install
-```
-Now you can run the tests before the fix (`node index.js`) and fix the bug.
 
-Build the module again with the fix included.
-```
-npm run build
-...
 
