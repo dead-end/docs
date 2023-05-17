@@ -56,7 +56,6 @@ Run your test code again
 
 
 # Single Test
-
 ```
 npm i -g jest-cli
 ```
