@@ -23,7 +23,7 @@ Create the link
 - https://medium.com/dailyjs/how-to-use-npm-link-7375b6219557
 ```
 npm link
-...
+```
 
 Then we create a project to test the fix
 
